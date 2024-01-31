@@ -1,0 +1,149 @@
+* {
+ font-family: poppins;
+ font-weight: 200;
+}
+
+body {
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(146,83,188,1) 34%, rgba(252,70,107,1) 100%);
+}
+
+.main-header {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+}
+
+.header-text {
+    font-size: 32px;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+    font-family: poppins;
+    color: white;
+}
+
+.header-text p {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.wrapper {
+    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.box {
+    background: url(img/matthew-manuel-BhLSBX-0rnM-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 550px;
+    width: 550px;
+    box-shadow: 0px 20px 5px 5px rgba(0, 0, 0, 2);
+    animation: buble 5s ease-in-out infinite;
+}
+
+.main-intro {
+    /* kosong */
+}
+
+.left-intro {
+    display: flex;
+    justify-content: center;
+    animation: fly 5s infinite ease-in-out;
+}
+
+.left-des {
+    font-size: large;
+    color: white;
+    margin-top: 5rem;
+    border: 4px solid plum;
+    max-width: 600px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    max-height: 300px;
+}
+
+.left-intro {
+    position: relative;
+    overflow: hidden;
+}
+
+.left-intro:hover .left-des {
+    transform: scale(1.1);
+}
+
+.left-des {
+    font-size: large;
+    color: white;
+    margin-top: 5rem;
+    border: 4px solid plum;
+    max-width: 600px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    max-height: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.left-des::first-letter {
+    font-size: 40px;
+    color: plum;
+}
+
+/* card */
+.card {
+    display: flexbox;
+
+}
+
+.sub-card {
+    width: 800px;
+    display: flex;
+    margin-top: 4rem;
+    object-fit: contain;
+    font-size: 30px;
+}
+
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid orange;
+    }
+}
+
+@keyframes buble {
+    0% {
+        border-radius: 60% 30% 40% 70%/60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 30% 40% 70%/60% 30% 70% 40%;
+    }
+}
+
+@keyframes fly {
+    0% {
+        padding-left: 20px;
+    }
+    20% {
+        padding-left: -20px;
+    }
+    40% {
+        padding-bottom: 30px;
+    }
+    60% {
+        padding-bottom: -30px;
+    }
+    80% {
+        padding-right: 40px;
+    }
+    100% {
+        padding-right: -40px;
+    }
+}
